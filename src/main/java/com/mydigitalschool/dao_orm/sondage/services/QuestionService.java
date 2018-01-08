@@ -2,6 +2,7 @@ package com.mydigitalschool.dao_orm.sondage.services;
 
 import com.mydigitalschool.dao_orm.sondage.dtos.Question;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -15,12 +16,15 @@ public class QuestionService {
     @Autowired
     NamedParameterJdbcTemplate jdbcTemplate;
 
+    public QuestionService() {
+        super();
+    }
+
     public List<Question> getQuestions() {
         // TODO implémenter la requête de lecture avec un RowMapper<Question>
-    	String SQL = "select intitule from question";
+        String sql = "select intitule from question";
 
-    	
-            
-        throw new UnsupportedOperationException();
+        List<Question> questions  = jdbcTemplate.query(sql, new BeanPropertyRowMapper(Question.class));
+        return questions;
     }
 }
