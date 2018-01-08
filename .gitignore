@@ -1,0 +1,27 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# OS temps files
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+Desktop.ini
+
+# Eclipse
+/build/
+/bin/
+.project
+.metadata
+.classpath
+.recommenders/
+.settings/
+*.launch
+local.
+
+# IntelliJ Idea
+.idea
+*.iws
+*.iml
+*.ipr

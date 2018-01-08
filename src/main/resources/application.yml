@@ -1,0 +1,22 @@
+logging.level:
+  com.mydigitalschool: DEBUG
+
+# port http (https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-change-the-http-port)
+server.port: 9090
+
+spring:
+  # pour avoir des logs colorés dans la console
+  output.ansi.enabled: always
+  # permet à Spring de créer un bean datasource injectable dans les DAO (https://tomcat.apache.org/tomcat-8.0-doc/jdbc-pool.html#Common_Attributes)
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # nombre initial de connexions dans le pool utilisé par la dataSource
+    initial-size: 5
+    url: jdbc:mysql://localhost:3306/daoormdto?useUnicode=yes&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+    username: daoormdtouser
+    password: daoormdtopwd
+  # désactiver le restart en production
+  devtools.restart:
+    enabled: true
+    additional-paths: src/main/java/com/mydigitalschool/dao_orm
+

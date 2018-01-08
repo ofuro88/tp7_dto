@@ -1,0 +1,53 @@
+SID	Quel système d'exploitation utilisez-vous (le plus) ?	Quelle est votre activité principale dans l'ingénierie logicielle (pour laquelle vous souhaitez décrire votre environnement) ?	Quel IDE utilisez-vous le plus (le + souvent, avec le + de plaisir) ?	Quels langages de programmation utilisez-vos dans cet/ces IDE ?	Quels systèmes de gestion de build & dépendances utilisez-vous le plus (fréquemment, favorablement) ?
+458666	Windows,Linux	développement back	IntelliJ,NetBeans	PHP	Maven
+458668	MacOS	développement front	IntelliJ	Javascript (front / back)	NPM,Yarn
+458669	Linux	développement back,développement front	IntelliJ,Visual Studio Code	langage JVM,Javascript (front / back)	NPM
+458670	Linux	développement back,(dev)ops	IntelliJ	langage JVM,Javascript (front / back)	Maven
+458671	MacOS	développement back,développement front,(dev)ops	IntelliJ,Visual Studio Code,VI(M)	langage JVM,Javascript (front / back)	Maven,NPM
+458672	Windows	développement front	Visual Studio Code,Atom	Javascript (front / back)	NPM,Yarn
+458673	Windows,MacOS	développement front,mobile	IntelliJ,AndroidStudio	langage JVM	Gradle,Maven
+458674	Windows,MacOS	développement back,développement front	IntelliJ,Atom	langage JVM,Javascript (front / back)	Maven,NPM
+458675	Windows	développement back,développement front	SublimeText	Javascript (front / back)	NPM
+458681	Windows	développement back	Eclipse	langage JVM	Maven
+458682	Windows	développement front	Atom	Javascript (front / back)	NPM,Yarn
+458683	MacOS	développement front,(dev)ops,test / qualité	IntelliJ,Visual Studio Code,VI(M)	langage JVM,Javascript (front / back),Go	SBT,GoDep
+458684	Windows,Linux	développement back,développement front,(dev)ops	IntelliJ,Visual Studio Code,VI(M),Bracket,SublimeText	langage JVM,Javascript (front / back),C, C++, Python	Gradle,Yarn
+458687	Linux	développement back,développement front	IntelliJ,Atom	langage JVM,Javascript (front / back)	Maven,NPM,Yarn
+458688	Linux	test / qualité	IntelliJ	langage JVM	Maven
+458694	Windows,Linux	développement back,développement front	IntelliJ	PHP,Javascript (front / back)	NPM
+458697	Linux	développement back,développement front,(dev)ops,gestion de projet,mobile	IntelliJ,Atom,AndroidStudio	langage JVM,Javascript (front / back)	Gradle,Maven,SBT
+458698	MacOS,Linux	développement back	IntelliJ	langage JVM	Maven
+458699	MacOS	développement back,développement front	VI(M)	Javascript (front / back),Rust	Yarn,Cargo
+458703	Windows,MacOS,Linux	développement back,développement front	VI(M),NetBeans	PHP,Javascript (front / back)	Composer
+458706	Windows,Linux	développement back,gestion de projet	IntelliJ	langage JVM	Maven,NPM
+458708	Linux	développement back,développement front	Eclipse,IntelliJ	langage JVM,PHP,Javascript (front / back)	Maven
+458709	Linux	développement front,(dev)ops	Visual Studio Code,VI(M)	Javascript (front / back),TypeScript	NPM,Yarn
+458714	Windows	développement back	IntelliJ	langage JVM	Maven
+458719	Windows,MacOS	développement front	Visual Studio Code	Javascript (front / back)	Yarn
+458724	Windows,Linux	développement back,(dev)ops	IntelliJ,Visual Studio Code	langage JVM,Javascript (front / back),Go	Maven
+458746	Linux	développement back,développement front,(dev)ops	IntelliJ	langage JVM,Javascript (front / back)	Maven,NPM
+458752	Windows	(dev)ops	Eclipse,Atom,VI(M)	langage JVM,Python	Maven
+458755	Windows,Linux	développement back,développement front	Eclipse,IntelliJ	langage JVM,Javascript (front / back)	Maven,NPM
+458764	Windows	développement back,développement front	IntelliJ,Visual Studio Code	langage JVM,Javascript (front / back)	Maven,NPM
+458771	Windows,MacOS,Linux	développement back,développement front	IntelliJ,Visual Studio Code	langage JVM,Javascript (front / back)	Maven,Yarn
+458774	Linux	développement back	IntelliJ	langage JVM	Maven
+458777	Linux	développement back,développement front,test / qualité	IntelliJ	langage JVM,Javascript (front / back)	Maven
+458783	Windows	développement back,développement front	Eclipse,IntelliJ,Visual Studio Code	langage JVM,Javascript (front / back)	Maven,NPM,Yarn
+458785	MacOS,Linux	développement back,développement front	IntelliJ	PHP,Javascript (front / back)	NPM,Composer,Nuget
+458807	MacOS	intégration web	CodaPanic	PHP,Javascript (front / back),HTML/CSS	
+458819	Linux	développement back,développement front	IntelliJ,Visual Studio Code	langage JVM,Javascript (front / back)	NPM,Yarn
+458827	Windows,Linux	développement back,développement front,(dev)ops	Eclipse,IntelliJ,Visual Studio Code	langage JVM,Javascript (front / back), TypeScript	Maven,NPM
+458873	Windows	développement back	IntelliJ	langage JVM	Maven
+458876	Linux	développement back,développement front	Atom	Javascript (front / back),Go	Yarn
+458885	Linux	développement back,(dev)ops	IntelliJ,Visual Studio Code	langage JVM	Maven,NPM
+458893	Windows	développement back,développement front	Eclipse,Visual Studio Code	langage JVM,Javascript (front / back),C#	Gradle,Maven,NPM,Yarn
+458895	Linux	développement front,gestion de projet	SublimeText	PHP,Javascript (front / back),HTML/CSS	NPM,Composer
+458922	Windows,Linux	développement back,(dev)ops	Eclipse,IntelliJ,Notepad++	langage JVM	Maven
+458937	Linux	test / qualité	IntelliJ	langage JVM	Maven
+459025	Windows	développement back,développement front	IntelliJ	langage JVM,Javascript (front / back)	Maven,NPM
+459109	Linux	développement back,développement front,sécurité	VI(M)	Python	Yarn
+459119	Windows	développement back,développement front	Visual Studio,IntelliJ	C#,Javascript (front / back)	NPM,Nuget,TeamFoundationServer
+459125	Linux	sécurité	VI(M)	bash	make
+459411	Linux	développement back,développement front	IntelliJ	langage JVM,Javascript (front / back)	Maven
+459681	Windows,Linux	développement back,développement front,(dev)ops	IntelliJ	langage JVM,Javascript (front / back)	Maven,NPM
+459694	Linux	développement back,développement front	IntelliJ,Atom	langage JVM,Javascript (front / back)	Maven,Yarn
