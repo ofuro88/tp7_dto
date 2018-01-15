@@ -74,5 +74,3 @@ Application :
 * combien y a-t-il de développeurs Javascript qui travaillent avec Atom ?
 * combien y a-t-il de développeurs Javascript qui travaillent avec VisualstudioCode ?
 * quelle est l'activité principale des développeurs Javascript ?
-
-*Bonus* : proposer la requête pour trouver le nb de développeurs front qui utilisent Atom dans un environnement Linux (et donner la valeur trouvée) ?

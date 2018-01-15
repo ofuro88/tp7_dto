@@ -28,7 +28,7 @@ public class QueryController {
     }
 
     @GetMapping("/options-by-question")
-    public List<Question> qestionOptions() {
-        return questionService.getQuestions();
+    public Question qestionOptions(Integer idQuestion) {
+        return null; //questionService.getQuestionsById(idQuestion);
     }
 }
