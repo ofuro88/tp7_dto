@@ -15,6 +15,5 @@ public class QuestionMapper implements RowMapper<Question> {
         question.setIntitule(resultSet.getString("intitule"));
 
         return question;
-
     }
 }
