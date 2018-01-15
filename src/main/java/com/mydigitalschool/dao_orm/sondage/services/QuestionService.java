@@ -27,4 +27,16 @@ public class QuestionService {
         List<Question> questions  = jdbcTemplate.query(sql, new BeanPropertyRowMapper(Question.class));
         return questions;
     }
+
+    //Problème : QuestionMapper n'est pas vailde (il veut un type Mapper et non com . ... .QuestionMapper)
+    /*public Question getQuestionsById(Integer id) {
+        String sql = "SELECT * FROM Question WHERE id = ?";
+        Question question = jdbcTemplate.queryForObject(
+                sql,
+                new Object[]{id},
+                new QuestionMapper()
+        );
+
+        return question;
+    }*/
 }
