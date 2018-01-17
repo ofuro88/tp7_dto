@@ -27,10 +27,13 @@ public class ParticipantService {
 
         return participants;
     }
+    
+	public int getNumberOfParticipants() {
+		return getParticipants().size();
+	}
 
 	public Participant getParticipantById(Integer id) {
-		if (id> getParticipants().size()) {
-			System.out.println("Aucun participant avec cet id present en base");
+		if (id>getNumberOfParticipants()) {
 			return null;
 		}
 		String sql = "SELECT * FROM participant WHERE id = ?";

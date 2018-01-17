@@ -34,6 +34,10 @@ public class QuestionService{
 		return questions;
 	}
 	
+	public int getNumberOfQuestions() {
+		return getQuestions().size();
+	}
+	
 	public Question getQuestionsById(Integer id) {
 		if (id> getQuestions().size()) {
 			return null;

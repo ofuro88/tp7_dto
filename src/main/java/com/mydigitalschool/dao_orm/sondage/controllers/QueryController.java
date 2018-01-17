@@ -37,6 +37,16 @@ public class QueryController {
     public List<Question> questions() {
         return questionService.getQuestions();
     }
+    
+    @GetMapping("/number-of-questions")
+    public int numberOfQuestions() {
+    	return questionService.getNumberOfQuestions();
+    }
+    
+    @GetMapping("/number-of-participants")
+    public int numberOfParticipants() {
+    	return participantService.getNumberOfParticipants();
+    }
 
     @GetMapping("/participants")
     public List<Participant> participants(){
