@@ -50,7 +50,9 @@ Pour découvrir les questions et les options de réponses proposées aux partici
 
 Applications :
 * combien y a-t-il des participants au sondage ?
+52
 * combien y a-t-il des questions dans le sondage ?
+5
 
 # Étape 3 - analyse globale
 

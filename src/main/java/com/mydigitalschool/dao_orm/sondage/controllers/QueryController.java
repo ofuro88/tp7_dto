@@ -47,4 +47,16 @@ public class QueryController {
     public Participant participantOptions(Integer participantId) {
     	return participantService.getParticipantById(participantId);
     }
+    
+    @GetMapping("/item-responses")
+    public Item items(Integer participantId) {
+    	//TODO
+    	return null;
+    }
+    
+    @GetMapping("/item-responses-of-question")
+    public Item nbItemByQuestionId(Integer participantId) {
+    	//TODO
+    	return null;
+    }
 }
