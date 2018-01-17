@@ -36,7 +36,6 @@ public class QuestionService{
 	
 	public Question getQuestionsById(Integer id) {
 		if (id> getQuestions().size()) {
-			System.out.println("Aucune question presente en base");
 			return null;
 		}
 		String sql = "SELECT * FROM question WHERE id = ?";
