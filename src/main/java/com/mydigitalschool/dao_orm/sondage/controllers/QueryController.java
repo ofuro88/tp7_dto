@@ -1,13 +1,16 @@
 package com.mydigitalschool.dao_orm.sondage.controllers;
 
-import com.mydigitalschool.dao_orm.sondage.dtos.Question;
-import com.mydigitalschool.dao_orm.sondage.services.QuestionService;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import com.mydigitalschool.dao_orm.sondage.dtos.Participant;
+import com.mydigitalschool.dao_orm.sondage.dtos.Question;
+import com.mydigitalschool.dao_orm.sondage.services.ParticipantService;
+import com.mydigitalschool.dao_orm.sondage.services.QuestionService;
 
 @RestController
 @RequestMapping(QueryController.ENDPOINT)
@@ -16,6 +19,9 @@ public class QueryController {
 
     @Autowired
     QuestionService questionService;
+    
+    @Autowired
+    ParticipantService participantService;
 
     @GetMapping("")
     public String home() {
@@ -27,8 +33,13 @@ public class QueryController {
         return questionService.getQuestions();
     }
 
+    @GetMapping("/participants")
+    public List<Participant> participants(){
+    	return participantService.getParticipants();
+    }
+    
     @GetMapping("/options-by-question")
-    public Question qestionOptions(Integer idQuestion) {
-        return null; //questionService.getQuestionsById(idQuestion);
+    public Question questionOptions(Integer questionId) {
+        return questionService.getQuestionsById(questionId);
     }
 }

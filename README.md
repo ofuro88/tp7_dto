@@ -33,7 +33,7 @@ Assurez-vous que le projet soit importé dans votre IDE en UTF-8 pour que les do
 
 ## Étape 1
 
-Au 1er démarrage de l'application, Flyway va générer les tables de stockage des données d'un sondage sur le thème des environnements de développement. Le script d'insertion des données prenant trop de temps à s'exécuter, appeler le endpoint suivant en requête HTTP POST pour lancer l'import des données du sondage :
+Au 1er démarrage de l'application, Flyway va générer les tables de stockage des données d'un sondage sur le thème des environnements de développement. Le script d'insertion des données prenant trop de temps à s'exécuter, appeler le endpoint suivant en requête HTTP POST /sur Insomnia/ pour lancer l'import des données du sondage :
 
 ```sh
 curl -i -X POST localhost:9090/import
