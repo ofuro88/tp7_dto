@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.mydigitalschool.dao_orm.sondage.dtos.Participant;
 import com.mydigitalschool.dao_orm.sondage.dtos.Question;
+import com.mydigitalschool.dao_orm.sondage.mapper.ParticipantMapper;
 import com.mydigitalschool.dao_orm.sondage.mapper.QuestionMapper;
 
 @Service

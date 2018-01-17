@@ -1,4 +1,4 @@
-package com.mydigitalschool.dao_orm.sondage.services;
+package com.mydigitalschool.dao_orm.sondage.mapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
