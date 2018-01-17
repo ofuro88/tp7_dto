@@ -8,6 +8,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
 import com.mydigitalschool.dao_orm.sondage.dtos.Participant;
+import com.mydigitalschool.dao_orm.sondage.dtos.Question;
+import com.mydigitalschool.dao_orm.sondage.mapper.QuestionMapper;
 
 @Service
 public class ParticipantService {
@@ -24,6 +26,17 @@ public class ParticipantService {
 
         return participants;
     }
+
+	public Participant getParticipantById(Integer id) {
+		if (id> getParticipants().size()) {
+			System.out.println("Aucun participant avec cet id present en base");
+			return null;
+		}
+		String sql = "SELECT * FROM participant WHERE id = ?";
+		Participant participant = (Participant) jdbcTemplate.queryForObject(
+				sql, new Object[] { id }, new ParticipantMapper());
+		return participant;
+	}
     
 
 }

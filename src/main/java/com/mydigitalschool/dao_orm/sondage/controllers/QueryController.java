@@ -42,4 +42,9 @@ public class QueryController {
     public Question questionOptions(Integer questionId) {
         return questionService.getQuestionsById(questionId);
     }
+    
+    @GetMapping("/options-by-participant")
+    public Participant participantOptions(Integer participantId) {
+    	return participantService.getParticipantById(participantId);
+    }
 }
