@@ -26,6 +26,10 @@ public class QuestionService{
 		super();
 	}
 
+	/**
+	 * 
+	 * @return liste des questions
+	 */
 	public List<Question> getQuestions() {
 		String sql = "SELECT * FROM question";
 		List<Question> questions = jdbcTemplate.query(sql,
@@ -34,6 +38,20 @@ public class QuestionService{
 		return questions;
 	}
 	
+	/**
+	 * 
+	 * @return nombre de questions
+	 */
+	public int getNumberOfQuestions() {
+		return getQuestions().size();
+	}
+	
+	
+	/**
+	 * 
+	 * @param id
+	 * @return Une question par l'id entré
+	 */
 	public Question getQuestionsById(Integer id) {
 		if (id> getQuestions().size()) {
 			return null;
