@@ -31,18 +31,19 @@ public class ReponseService {
 
 
 	public List<Reponse> getItemById(Integer questionId,Integer itemId) {
-		//			if (questionId> getItems().size()) {
-		//				System.out.println("Aucun item avec cet id present en base");
-		//				return null;
-		//			}
-
 		String sql = "SELECT * FROM reponse INNER JOIN item ON reponse.item_id = item.ID "
 				+ "WHERE item.question_id = "+questionId+" AND reponse.item_id = "+itemId;
 		List<Reponse> item = jdbcTemplate.query(
 				sql, new ReponseMapper());
 		return item;
 	}
-	
+
+	/**
+	 * Cree une list d'Integer (qui renverra le nombre de reponse par question
+	 * Cree une liste de reponses sur l'item
+	 * Fais un.size() de la liste de reponse et l'entre dans la liste d'Integer 
+	 * @return List d'Integer avec le nombre de reponses sur chaque items
+	 */
 	public List<Integer> getNumberOfResponseOfItem(){
 		List<Integer> numberOfResponsesOnItem = new ArrayList<Integer>();
 		for (int i = 0; i< itemService.getItems().size();i++) {
@@ -53,7 +54,7 @@ public class ReponseService {
 		}
 		return numberOfResponsesOnItem;
 
-		
+
 	}
 
 	/**
@@ -71,11 +72,6 @@ public class ReponseService {
 				list.add(getItemById(questionId,i).size());
 
 			}
-
-
-
-
-
 		}
 		return list;
 	}
