@@ -2,6 +2,7 @@ package com.mydigitalschool.dao_orm.sondage.controllers;
 
 import java.util.List;
 
+import com.mydigitalschool.dao_orm.sondage.services.ItemDuoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,6 +28,9 @@ public class QueryController {
 
     @Autowired
     ItemService itemService;
+
+    @Autowired
+    ItemDuoService itemDuoService;
     
     @GetMapping("")
     public String home() {
@@ -67,5 +71,13 @@ public class QueryController {
     @GetMapping("/item-responses-of-question")
     public Item nbItemByQuestionId(Integer participantId) {
     	return itemService.getItemById(participantId);
+    }
+
+    /**
+     * nombre de participants ayant répondu à deux items donnés (ItemDuo)
+     */
+    @GetMapping("/responses-of-two-items?itemId=1&itemId=2")
+    public int itemDuo(Integer item1, Integer item2) {
+        return itemDuoService.getItemDuo(item1, item2);
     }
 }
