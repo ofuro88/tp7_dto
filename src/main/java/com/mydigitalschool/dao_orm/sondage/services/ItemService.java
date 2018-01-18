@@ -20,6 +20,10 @@ public class ItemService {
     	super();
     }
     
+    /**
+     *  
+     * @return liste de tous les items
+     */
     public List<Item> getItems(){
     	String sql = "SELECT * FROM item";
     	List<Item> item = jdbcTemplate.query(sql,
@@ -27,15 +31,29 @@ public class ItemService {
 
         return item;
     }
-    
-    public Item getItemById(Integer id) {
-		if (id> getItems().size()) {
-			System.out.println("Aucun item avec cet id present en base");
-			return null;
-		}
-		String sql = "SELECT * FROM item WHERE question_id = ?";
-		Item item = (Item) jdbcTemplate.queryForObject(
-				sql, new Object[] { id }, new ItemMapper());
+
+    /**
+     * 
+     * @return le nombre d'items 
+     */
+    private int getNumberOfItems() {
+    	return getItems().size();
+	}
+
+	/**
+     * 
+     * @param id
+     * @return liste des items affectés à une question.
+     */
+    public List<Item> getItemById(Integer questionId,Integer itemId) {
+//		if (questionId> getItems().size()) {
+//			System.out.println("Aucun item avec cet id present en base");
+//			return null;
+//		}
+		
+		String sql = "SELECT * FROM reponse WHERE question_id = ? AND item_id=?";
+		List<Item> item = jdbcTemplate.query(
+				sql, new Object[] { questionId,itemId }, new ItemMapper());
 		return item;
 	}
 }

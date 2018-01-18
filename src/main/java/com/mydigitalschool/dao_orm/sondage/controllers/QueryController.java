@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.mydigitalschool.dao_orm.sondage.dtos.Item;
 import com.mydigitalschool.dao_orm.sondage.dtos.Participant;
 import com.mydigitalschool.dao_orm.sondage.dtos.Question;
+import com.mydigitalschool.dao_orm.sondage.dtos.Reponse;
 import com.mydigitalschool.dao_orm.sondage.services.ItemService;
 import com.mydigitalschool.dao_orm.sondage.services.ParticipantService;
 import com.mydigitalschool.dao_orm.sondage.services.QuestionService;
@@ -27,6 +28,9 @@ public class QueryController {
 
     @Autowired
     ItemService itemService;
+    
+    @Autowired
+    ReponseService reponseService;
     
     @GetMapping("")
     public String home() {
@@ -69,13 +73,13 @@ public class QueryController {
      * @return
      */
     @GetMapping("/item-responses")
-    public List<Item> items(Integer participantId) {   	
-    	return itemService.getItems();
+    public List<Integer> items(Integer questionId) {   	
+    	return reponseService.countEveryResponseOnAnItemOnQuestion(questionId);
     }
     
     
     @GetMapping("/item-responses-of-question")
-    public Item nbItemByQuestionId(Integer participantId) {
-    	return itemService.getItemById(participantId);
+    public List<Reponse> nbItemByQuestionId(Integer questionId,Integer itemId) {
+    	return reponseService.getItemById(questionId,itemId);
     }
 }

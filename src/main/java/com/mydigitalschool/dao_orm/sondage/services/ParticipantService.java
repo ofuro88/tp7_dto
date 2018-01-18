@@ -20,6 +20,10 @@ public class ParticipantService {
     	super();
     }
 
+    /**
+     * 
+     * @return liste de tous les participants
+     */
     public List<Participant> getParticipants(){
     	String sql = "SELECT * FROM participant";
     	List<Participant>participants = jdbcTemplate.query(sql,
@@ -28,6 +32,10 @@ public class ParticipantService {
         return participants;
     }
     
+    /**
+     * 
+     * @return nombre de participants
+     */
 	public int getNumberOfParticipants() {
 		return getParticipants().size();
 	}
