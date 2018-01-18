@@ -16,6 +16,7 @@ public class ItemService {
 
 	@Autowired
     JdbcTemplate jdbcTemplate;
+	
     public ItemService() {
     	super();
     }
@@ -46,15 +47,12 @@ public class ItemService {
 	 * @param itemId
      * @return liste des items affectés à une question.
      */
-    public List<Item> getItemById(Integer questionId,Integer itemId) {
-//		if (questionId> getItems().size()) {
-//			System.out.println("Aucun item avec cet id present en base");
-//			return null;
-//		}
-		
-		String sql = "SELECT * FROM reponse WHERE question_id = ? AND item_id=?";
+    public List<Item> getItemsByQuestion(Integer questionId) {		
+		String sql = "SELECT * FROM item WHERE question_id = ?";
 		List<Item> item = jdbcTemplate.query(
-				sql, new Object[] { questionId,itemId }, new ItemMapper());
+				sql, new Object[] { questionId }, new ItemMapper());
 		return item;
 	}
+    
+
 }

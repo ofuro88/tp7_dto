@@ -72,10 +72,10 @@ public class QueryController {
      * @param questionId
      * @return
      */
-    @GetMapping("/item-responses")
-    public List<Integer> items(Integer questionId) {   	
-    	return reponseService.countEveryResponseOnAnItemOnQuestion(questionId);
-    }
+//    @GetMapping("/item-responses")
+//    public List<Integer> items(Integer questionId,Integer itemId) {   	
+//    	return reponseService.countEveryResponseOnAnItemOnQuestion(questionId);
+//    }
 
     /**
      * nombre de participants ayant répondu à deux items donnés (ItemDuo)
@@ -83,5 +83,15 @@ public class QueryController {
     @GetMapping("/responses-of-two-items?itemId=1&itemId=2")
     public int itemDuo(Integer item1, Integer item2) {
         return itemDuoService.getItemDuo(item1, item2);
+    }
+    
+    /**
+     * Retourne le nombre de reponse sur chaque item d'une question donnée
+     * @param questionId
+     * @return
+     */
+    @GetMapping("/number-of-response-on-item-by-question")
+    public List<Integer> numberOfItemsByQuestion(Integer questionId) {
+    	return reponseService.countEveryResponseOnAnItemOnQuestion(questionId);
     }
 }
