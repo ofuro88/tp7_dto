@@ -71,7 +71,7 @@ Application :
 
 # Étape 3 - analyse fine
 
-Ajouter la gestion du endpoint `/api/queries/responses-of-two-items?itemId=1&itemId=2` pour lister le nombre de participants ayant répondu à deux items donnés (`ItemDuo`)
+Ajouter la gestion du endpoint `/api/queries/responses-of-two-items?itemId1=1&itemId2=2` pour lister le nombre de participants ayant répondu à deux items donnés (`ItemDuo`)
  
 Application :
 * combien y a-t-il de développeurs Java qui travaillent avec Eclipse ?

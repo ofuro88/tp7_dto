@@ -89,9 +89,9 @@ public class QueryController {
     /**
      * nombre de participants ayant répondu à deux items donnés (ItemDuo)
      */
-    @GetMapping("/responses-of-two-items?itemId=1&itemId=2")
-    public int itemDuo(Integer item1, Integer item2) {
-        return itemDuoService.getItemDuo(item1, item2);
+    @GetMapping("/responses-of-two-items")
+    public int itemDuo(Integer itemId1, Integer itemId2) {
+        return itemDuoService.getItemDuo(itemId1, itemId2);
     }
     
     /**
