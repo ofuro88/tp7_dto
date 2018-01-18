@@ -42,7 +42,8 @@ public class ItemService {
 
 	/**
      * 
-     * @param id
+     * @param questionId
+	 * @param itemId
      * @return liste des items affectés à une question.
      */
     public List<Item> getItemById(Integer questionId,Integer itemId) {

@@ -2,19 +2,15 @@ package com.mydigitalschool.dao_orm.sondage.controllers;
 
 import java.util.List;
 
-import com.mydigitalschool.dao_orm.sondage.services.ItemDuoService;
+import com.mydigitalschool.dao_orm.sondage.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mydigitalschool.dao_orm.sondage.dtos.Item;
 import com.mydigitalschool.dao_orm.sondage.dtos.Participant;
 import com.mydigitalschool.dao_orm.sondage.dtos.Question;
 import com.mydigitalschool.dao_orm.sondage.dtos.Reponse;
-import com.mydigitalschool.dao_orm.sondage.services.ItemService;
-import com.mydigitalschool.dao_orm.sondage.services.ParticipantService;
-import com.mydigitalschool.dao_orm.sondage.services.QuestionService;
 
 @RestController
 @RequestMapping(QueryController.ENDPOINT)
@@ -73,18 +69,12 @@ public class QueryController {
     
     /**
      * Compte le nombre de reponses en fonction de l'item
-     * @param participantId
+     * @param questionId
      * @return
      */
     @GetMapping("/item-responses")
     public List<Integer> items(Integer questionId) {   	
     	return reponseService.countEveryResponseOnAnItemOnQuestion(questionId);
-    }
-    
-    
-    @GetMapping("/item-responses-of-question")
-    public List<Reponse> nbItemByQuestionId(Integer questionId,Integer itemId) {
-    	return reponseService.getItemById(questionId,itemId);
     }
 
     /**

@@ -1,4 +1,4 @@
-package com.mydigitalschool.dao_orm.sondage.controllers;
+package com.mydigitalschool.dao_orm.sondage.services;
 
 import java.util.ArrayList;
 import java.util.List;
