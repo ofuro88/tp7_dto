@@ -19,9 +19,9 @@ public class Application {
 //		// lancement des requetes affichées en log
 //			// nombre de participants
 //		System.out.print("combien y a-t-il des participants au sondage ?");
-//		System.out.println(queryController.participants().size());
+//		System.out.println(queryController.numberOfParticipants());
 //			// nombre questions ?
 //		System.out.print("combien y a-t-il des questions dans le sondage ?");
-//		System.out.println(queryController.questions().size());
+//		System.out.println(queryController.numberOfQuestions());
 	}
 }
