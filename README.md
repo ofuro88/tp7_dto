@@ -63,8 +63,11 @@ Ajouter :
 
 Application :
 * quel est le système d'exploitation le plus populaire ?
+(32)2ème 	questionId=1 	=>	Windows
 * quel l'IDE majoritaire ?
+(37)1er		questionId=3	=>	IntelliJ
 * quel est le système de build le plus populaire ?
+(32)1er		questionId=5	=>	Maven
 
 # Étape 3 - analyse fine
 
