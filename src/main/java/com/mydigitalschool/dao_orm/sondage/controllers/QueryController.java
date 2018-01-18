@@ -76,7 +76,16 @@ public class QueryController {
 //    public List<Integer> items(Integer questionId,Integer itemId) {   	
 //    	return reponseService.countEveryResponseOnAnItemOnQuestion(questionId);
 //    }
-
+    
+    /**
+     * 
+     * @return Nombre de reponses sur tel item
+     */
+    @GetMapping("item-responses")
+    public List<Integer> numberOfResponseOnItem(){
+    	return reponseService.getNumberOfResponseOfItem();
+    }
+    
     /**
      * nombre de participants ayant répondu à deux items donnés (ItemDuo)
      */
@@ -90,7 +99,7 @@ public class QueryController {
      * @param questionId
      * @return
      */
-    @GetMapping("/number-of-response-on-item-by-question")
+    @GetMapping("/item-responses-of-question")
     public List<Integer> numberOfItemsByQuestion(Integer questionId) {
     	return reponseService.countEveryResponseOnAnItemOnQuestion(questionId);
     }

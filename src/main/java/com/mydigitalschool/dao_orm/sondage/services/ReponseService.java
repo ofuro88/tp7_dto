@@ -42,6 +42,19 @@ public class ReponseService {
 				sql, new ReponseMapper());
 		return item;
 	}
+	
+	public List<Integer> getNumberOfResponseOfItem(){
+		List<Integer> numberOfResponsesOnItem = new ArrayList<Integer>();
+		for (int i = 0; i< itemService.getItems().size();i++) {
+			String sql = "SELECT * FROM reponse WHERE item_id ="+i;
+			List<Reponse> item = jdbcTemplate.query(
+					sql, new ReponseMapper());
+			numberOfResponsesOnItem.add(item.size());
+		}
+		return numberOfResponsesOnItem;
+
+		
+	}
 
 	/**
 	 * 
