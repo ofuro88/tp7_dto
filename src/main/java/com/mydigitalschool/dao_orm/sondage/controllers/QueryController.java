@@ -88,11 +88,37 @@ public class QueryController {
     
     /**
      * nombre de participants ayant répondu à deux items donnés (ItemDuo)
+     * @param itemId1
+     * @param itemId2
      */
     @GetMapping("/responses-of-two-items")
-    public int itemDuo(Integer itemId1, Integer itemId2) {
-        return itemDuoService.getItemDuo(itemId1, itemId2);
+    public String itemDuo(Integer itemId1, Integer itemId2) {
+        if(itemId1 == null || itemId2 == null){
+            return "demande incorrect";
+        }
+        else{
+            return itemDuoService.getItemDuo(itemId1, itemId2);
+        }
     }
+
+    /**
+     * activité principale des développeurs de tel langage
+     * recupère les participants ayant répondu ? à une question et renvoi la réponse la plus donné à la question ?
+     * @param questionId1
+     * @param itemId
+     * @param questionId2
+     */
+    @GetMapping("/response-of-question-by-response-of-other-question")
+    public String itemD(Integer questionId1, Integer itemId, Integer questionId2) {
+        if(questionId1 == null || itemId == null || questionId2 == null){
+            return "demande incorrect";
+        }
+        else{
+            return itemDuoService.getItemOfQuestionByOtherQuestion(questionId1, itemId, questionId2);
+        }
+    }
+
+
     
     /**
      * Retourne le nombre de reponse sur chaque item d'une question donnée

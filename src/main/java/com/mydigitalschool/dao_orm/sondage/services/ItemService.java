@@ -33,6 +33,21 @@ public class ItemService {
         return item;
     }
 
+	/**
+	 *
+	 * @return 1 item demandé
+	 */
+	public Item getItem(Integer itemId){
+		String sql = "SELECT * FROM item WHERE id = ?";
+		List<Item> items = jdbcTemplate.query(sql,
+				new Object[]{itemId},
+				new ItemMapper());
+
+		Item item = items.get(0);
+
+		return item;
+	}
+
     /**
      * 
      * @return le nombre d'items 
@@ -44,7 +59,6 @@ public class ItemService {
 	/**
      * 
      * @param questionId
-	 * @param itemId
      * @return liste des items affectés à une question.
      */
     public List<Item> getItemsByQuestion(Integer questionId) {		

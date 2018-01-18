@@ -63,19 +63,27 @@ Ajouter :
 
 Application :
 * quel est le système d'exploitation le plus populaire ?
-(32)2ème 	questionId=1 	=>	Windows
+    * (32)2ème 	questionId=1 	=>	Windows
 * quel l'IDE majoritaire ?
-(37)1er		questionId=3	=>	IntelliJ
+    * (37)1er		questionId=3	=>	IntelliJ
 * quel est le système de build le plus populaire ?
-(32)1er		questionId=5	=>	Maven
+    * (32)1er		questionId=5	=>	Maven
 
 # Étape 3 - analyse fine
 
 Ajouter la gestion du endpoint `/api/queries/responses-of-two-items?itemId1=1&itemId2=2` pour lister le nombre de participants ayant répondu à deux items donnés (`ItemDuo`)
  
 Application :
-* combien y a-t-il de développeurs Java qui travaillent avec Eclipse ?
+* combien y a-t-il de développeurs Java qui travaillent avec Eclipse ? 
+    * Java (itemId=14), Eclipse(ItemId=22) => 8
 * combien y a-t-il de développeurs Java qui travaillent avec IntelliJ ?
-* combien y a-t-il de développeurs Javascript qui travaillent avec Atom ?
-* combien y a-t-il de développeurs Javascript qui travaillent avec VisualstudioCode ?
-* quelle est l'activité principale des développeurs Javascript ?
+    * Java (itemId=14), IntelliJ(itemId=4) => 32
+* combien y a-t-il de développeurs Javascript qui travaillent avec Atom ? 
+    * Javascript(Itemid=10), Atom(itemId=17) => 7
+* combien y a-t-il de développeurs Javascript qui travaillent avec VisualstudioCode ? 
+    * Javascript(Itemid=10), VisualStudioCode(itemId=13) => 14
+* quelle est l'activité principale des développeurs Javascript ?  
+    * `/api/queries/item-responses-of-question?questionId1=4&itemId=10&questionId2=2`
+    * quel language => questionId = 4               
+    * langage javascript => itemId = 10
+    * question sur activité => questionId = 2 => reponse : ItemId = 9 (développement front)
